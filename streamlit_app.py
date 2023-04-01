@@ -6,14 +6,16 @@ import io
 # 在这里输入您的OpenAI API访问密钥
 openai.api_key = st.secrets["OPEN_AI_Key"]
 
-# 设置Streamlit页面标题和页面布局
-st.set_page_config(page_title="Essay Generator", page_layout="wide")
 
-# 添加Streamlit页面标题和说明
-st.title("Essay Generator")
-st.write("Enter your essay prompt and generate an essay with GPT-3.5 Turbo.")
 
 def main():
+	# 设置Streamlit页面标题和页面布局
+	st.set_page_config(page_title="Essay Generator", page_layout="wide")
+
+	# 添加Streamlit页面标题和说明
+	st.title("Essay Generator")
+	st.write("Enter your essay prompt and generate an essay with GPT-3.5 Turbo.")
+
     # 创建Streamlit表单，允许用户输入他们的作文题目、语言和所需字数
     with st.form(key='essay_generator'):
         prompt = st.text_input(label='Essay prompt', help="Enter your essay prompt.")
